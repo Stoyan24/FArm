@@ -1,0 +1,23 @@
+.container {
+  .checkbox-animal-list {
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    .ch-box {
+      margin: 10px;
+    }
+  }
+  .rhymes-display {
+    max-width: 900px;
+    margin: auto;
+  }
+  .custom-animals {
+    padding: 10px;
+    text-align: center;
+    .text-input {
+      margin: 10px;
+    }
+  }
+}

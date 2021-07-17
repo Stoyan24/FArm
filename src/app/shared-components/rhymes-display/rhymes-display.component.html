@@ -1,0 +1,7 @@
+<mat-card class="rhymes-container">
+    <div class="rhyme-wrap" *ngFor="let animal of animalList">
+      <h2>{{animal.animal}}</h2>
+      {{animal | lyricsGenerator}}
+    </div>
+</mat-card>
+

@@ -1,0 +1,43 @@
+.navigation {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 10px 20px;
+    justify-content: center;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      font-size: 40px;
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
+
+  .navigation-buttons {
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      border: 3px solid white;
+      border-radius: 20%;
+      padding: 2px 10px;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      transition: all 500ms ease-out;
+      &.active {
+        border-style: dashed;
+        transform: rotateZ(5deg);
+      }
+    }
+  }
+
+}

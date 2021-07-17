@@ -1,0 +1,21 @@
+.rhymes-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .rhyme-wrap {
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    white-space: pre;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  }
+}

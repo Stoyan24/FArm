@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="checkbox-animal-list">
+    <mat-checkbox class="ch-box" (change)="toggleAnimal(animal)" *ngFor="let animal of animalList">{{animal.animal}}</mat-checkbox>
+  </div>
+  <div>
+    <section class="custom-animals">
+      <form [formGroup]="this.newAnimal">
+        <mat-form-field class="text-input"  appearance="fill">
+          <mat-label>Animal name</mat-label>
+          <input matInput [maxLength]="30" placeholder="Animal name" formControlName="animal">
+        </mat-form-field>
+        <mat-form-field class="text-input" appearance="fill">
+          <mat-label>Animal sound</mat-label>
+          <input [maxLength]="30" matInput placeholder="Animal sound" formControlName="sound">
+        </mat-form-field>
+      </form>
+      <button mat-raised-button color="accent" [disabled]="!newAnimal.valid" (click)="addAnimal(this.newAnimal.value)">
+        Add Animal
+        <mat-icon>add</mat-icon>
+      </button>
+    </section>
+    <section *ngIf="selectedAnimals.length" class="rhymes-display">
+      <app-rhymes-display [animalList]="selectedAnimals"></app-rhymes-display>
+    </section>
+  </div>
+</div>
+
